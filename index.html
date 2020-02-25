@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tipos de Cambio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='src/index.css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <h1 class="h1 col-sm">Tipos de Cambio según fecha</h1>
+        </div>
+    </div>
+    <div class="container" id="ui-inputs">
+        <div class="row d-flex justify-content-center">
+                <button class="btn btn-secondary dropdown-toggle my-3 col-sm-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Moneda base
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                <div class="input-group my-3 col-sm-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="fecha-label">Fecha</span>
+                  </div>
+                  <input class="form-control" placeholder="aaaa-mm-dd" aria-describedby="fecha-label" id="fecha-input">
+                </div>
+                <button type="button" class="btn btn-secondary my-3 col-sm-3" id="boton-actualizar">Actualizar</button>
+        </div>
+    </div>
+    <div class="container">
+      <div class="h2 d-flex justify-content-center mb-3" id="mensaje">
+        
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <table class="table table-bordered table-hover col-sm">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Moneda</th>
+                    <th scope="col">Cambio</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla">
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='src/index.js'></script>
+</body>
+</html>
