@@ -9,7 +9,7 @@ function actualizarDropDownMonedas() {
     fetch("https://api.exchangeratesapi.io/latest")
     .then(respuesta => respuesta.json())
     .then(respuesta => {
-        Object.keys(respuesta.rates).forEach(moneda => {
+        Object.keys(respuesta.rates).concat('EUR').forEach(moneda => {
             $DROP_DOWN_MONEDAS.append(`<a class="dropdown-item" href="#">${moneda}</a>`)
         })
     })
